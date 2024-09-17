@@ -16,7 +16,7 @@
     <nav class="navigation">
         <a href="home.php">HOME</a>
         <a href="register.php">REGISTER</a>
-        <a href="login.php">SIGNIN</a>
+        <a href="index.php">SIGNIN</a>
         <!-- <a href="dashBoard.php">Services</a> -->
     </nav>
 </header>

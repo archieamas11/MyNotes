@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();   
 
             // Redirect back to the login page after successful registration
-            header("Location: ..//login.php");
+            header("Location: ..//index.php");
             exit();
         } catch (PDOException $e) {
             // Log error to a file
