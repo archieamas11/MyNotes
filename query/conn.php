@@ -1,8 +1,8 @@
 <?php
 
-$servername = "localhost";
+$servername = "207.148.118.163";
 $username = "root";
-$password = "";
+$password = "ux1kK0iycXOFsGSJLs0ckfWqkHTwpphMPJ5G6NJyFLe54koneYsXPzZQm6A7nTyr";
 $db = "crud";
 
 try {
