@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('');
+  /* background: ; */
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  padding: 20px 50px; /* Adjusted padding values */
+  background: grey;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  z-index: 99;
+
+}
+.logo{ 
+  font-size: 2em;
+  color:  azure;
+}
+.noteit h1 {
+/* color: black;
+margin: 5px 0;
+text-align: center;
+font-size: 2em; */
+} 
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  color: azure;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+.navigation a:hover::after{
+  transform: scaleX(1);
+}
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid green;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin: 0 auto; 
+  display: block;
+  transition: .5s;
+  justify-content: center;
+  text-align: center;
+}
+
+.btnLogin-popup:hover {
+  background: white;
+  color: black;
+}
+
+.wrapper{
+  position: relative;
+  width: 420px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(19, 1, 1, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgrey;
+  top: 40px;
+  /* overflow: hidden; */
+}
+.wrappers{
+  position: relative;
+  width: 420px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(19, 1, 1, 0.5);
+  /* border-radius: 20px; */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  top: 40px;
+
+  /* overflow: hidden; */
+}
+.wrappers1{
+  /* position: relative; */
+  width: 420px;
+  height: 440px;
+  /* background: transparent; */
+  /* border: 2px solid rgba(19, 1, 1, 0.5); */
+  /* border-radius: 20px; */
+  /* backdrop-filter: blur(20px); */
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, .5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+  top: 60px;
+  /* background: url('/images/des.PNG'); */
+  background: url('/images/des.PNG');
+  /* overflow: hidden; */
+}
+.img1{
+  background: url('/images/des.PNG');
+}
+.wrapper .form-box{
+  width: 100%;
+  padding: 20px;
+}
+.page-content {
+min-height: 100vh; 
+}
+.page-content {
+padding: 40px; 
+margin: 20px; 
+}
+.page-content {
+font-size: 16px; 
+line-height: 1.5; 
+}
+
+/* .wrapper .form-box.login{  */
+/* display: none; */
+/* } */
+/* .wrapper .form-box.register{
+  position: absolute;
+  transform: translateX(400px);
+} */
+
+.noteit h1 {
+  color: white; /* Note text color */
+  margin: 5px 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.noteit h2 {
+  color: green; /* It text color */
+  margin: 5px 0;
+  text-align: center;
+  font-size: 2em;
+}
+.noteit .green {
+  color: green; /* Set text color */
+}
+.noteit .white {
+  color: white; /* Set text color */
+}
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid gray;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: -15px; /* Adjust this value as needed to position the label */
+  left: 5px;
+  font-size: 1em;
+  color: black;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus + label,
+.input-box input:focus + label {
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+.remember-forgot{
+font-size: .9em;
+color: black;
+font-weight: 500;
+margin: -15px 0 15px;
+display: flex;
+justify-content: space-between;
+}
+.remember-forgot label input{
+accent-color: black;
+margin-right: 3px;
+}
+.remember-forgot a{
+color: blue;
+text-decoration: none;
+}
+.remember-forgot a:hover{
+text-decoration: underline;
+}
+.btn{
+width: 100%;
+height: 45px;
+background: black;
+border: none;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1em;
+color: azure;
+}
+.btn:hover {
+background-color: #0056b3;
+}
+.container{
+width: 90%;
+min-height: 100vh;
+background: linear-gradient(135deg, #cf9aff, #95c0ff);
+color: green;
+padding-top: 4%;
+padding-left: 10%;
+margin-left: 200px;
+padding: 60px;
+overflow-y: auto;
+}
+.notes-container {
+  max-height: 400px; /* Set maximum height for the container */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds container height */
+  display: flex;
+}
+.input-box1{
+position: relative;
+width: 100%;
+max-width: 450px;
+min-height: 150px;
+background: #fff;
+color: #333;
+padding: 20px;
+margin: 20px 0;
+outline: none;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+.notes-column {
+  flex: 1;
+  padding: 0 10px; /* Add padding to create space between columns */
+}
+.sidebar{
+  position: fixed; /* Fixed positioning to keep it visible */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: gray;
+    color: white;
+}
+.sidebar header{
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  line-height: 20px;
+  background:gray;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 70px;
+  width: 100%;
+  line-height: 55px;
+  font-size: 10px;
+  color: black;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn1, label #cancel{
+  position: absolute;
+  cursor: pointer;
+  background: white;
+  border-radius: 3px;
+}
+label #btn1{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+}
+label #cancel{
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #063146;
+  padding: 4px 9px;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}

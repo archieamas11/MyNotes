@@ -1,0 +1,943 @@
+
+
+ .note {
+          background-color: #f0f0f0;
+          padding: 10px;
+          margin-bottom: 10px;
+          transition: height 0.3s ease; 
+          overflow: hidden; 
+          position: relative; 
+          height: 150px; 
+      }
+  .note-content {
+          /* margin: 0; Remove margin to prevent extra spacing */
+          /* width: calc(100% - 40px); Adjust width to account for delete button */
+          resize: none; /* Disable textarea resize */
+          border: none; /* Remove textarea border */
+         word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        max-height: 100px; /* Adjust the maximum height as needed */
+         overflow: hidden;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+        /* margin-top: 50px; */
+        /* height: 100px;  */
+        margin-top: -78px;
+
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .fa-eye:before {
+            margin-right: 5px;
+            content: "\f06e";
+        }
+  .dropdown {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+      }
+
+      .dropdown-icon {
+          cursor: pointer;
+      }
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 120px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 10px;
+          text-decoration: none;
+          display: block;
+      }
+
+      .dropdown-content a:hover {
+          background-color: #f1f1f1;
+      }
+      .main-panel {
+          margin: 20px;
+          padding: 20px;
+          background-color: #f8f9fa;
+          border-radius: 8px;
+      }
+      #search{
+        width: 200px;
+        height: 30px;
+      }
+
+      .card {
+          margin-bottom: 20px;
+          border-radius: 8px;
+          /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+      }
+
+      .card-header1 {
+          font-size: 30px;
+          background-color: #777272;
+          color: #ffffff;
+          padding: 10px 20px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 1px 8px rgb(0 0 0 / 50%);
+      }
+      .card-header {
+        margin-top: -10px;
+        background-color: #ffffff;
+        font-size: 20px;
+        /* color: #ffffff; */
+          padding: 10px 20px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      .card-header button {
+    font-size: 20px;    
+    border: none;
+    transition: background-color 0.3s;
+    background-color: transparent;
+      }
+
+      .card-header a {
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: all 0.3s ease;
+      }
+
+      .card-header a:hover {
+          color: #ffc107;
+      }
+
+      .card-body {
+          /* padding: 20px; */
+      }
+
+
+.list-group-item1 {
+    background: #d9d9d9;
+    width: 33.33%; 
+    height: auto;
+    float: left; /* Float the items to the left to display side by side */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Add padding to the items for spacing */
+    margin-bottom: 10px; 
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.list-group-item2 {
+    background: #d9d9d9;
+    width: 33.33%; 
+    height: 226px;
+    float: left; /* Float the items to the left to display side by side */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Add padding to the items for spacing */
+    margin-bottom: 10px; 
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.action-icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+margin-bottom: 15px;
+}
+.btn-group a,
+.btn-group button {
+    margin-right:7px; /* Adjust this value to control the space between icons */
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: #e0e0e0; /* Change the hover background color to a lighter shade of grey */
+}
+
+      .list-group-item h3 {
+          margin-bottom: 10px;
+          color: #000000;
+      }
+
+      .text-muted {
+          color: #6c757d !important;
+      }
+
+      .text-info {
+          color: #7466ec !important;
+          padding-top: 47px;
+      }
+
+      .fa-clock-o {
+          margin-right: 15px;
+      }
+
+      /* Custom styles for forms */
+      form {
+          margin-bottom: 20px;
+        
+      }
+
+      form .form-group {
+          margin-bottom: 20px;
+          font: 30px bold;
+
+      }
+
+      form .form-control {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+
+      form textarea {
+          height: 100px;
+      }
+
+      form button {
+    display: block; /* Make the button a block-level element */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #777272;
+    color: rgb(255, 250, 250);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+      form button:hover {
+          /* background-color: #a8a9aa00; */
+      }
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.5);
+      }
+
+      .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 50px;
+          border: 1px solid #888;
+          width: 60%;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          animation-name: modalopen;
+          animation-duration: 0.5s;
+      }
+
+      @keyframes modalopen {
+          from {opacity: 0}
+          to {opacity: 1}
+      }
+
+      .close {
+        margin-top: -42px;
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        margin-right: -35px;
+          
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration:  none;
+          cursor: pointer;
+      }
+      .sidebar {
+   
+    }
+    .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;  
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    }
+    .sidebar-list {
+    list-style-type: none;
+    padding: 0;
+    }
+    .sidebar-list-item {
+    position: relative;
+    margin-bottom: 4px;
+    display: flex;
+        align-items: center;
+    }
+    .sidebar-list-item img {
+        width: 32px;
+    height: auto;
+    margin-right: 4px;
+    }
+    .sidebar-list-item a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    color: var(--sidebar-link);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    }
+    .sidebar-list-item span {
+        /* padding:10px; */
+        display: inline-block; /* Set display to inline-block to center */
+        vertical-align: middle; /* Align text vertically */
+        /* font-size: 25px; */
+    }
+    .sidebar-list-item svg {
+    margin-right: 8px;
+    }
+    .sidebar-list-item:hover {
+    background-color: var(--sidebar-hover-link);
+    }
+    .sidebar-list-item.active {
+    background-color: var(--sidebar-active-link);
+    }
+    .sidebar-list-item.active:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: var(--action-color);
+    height: 100%;
+    width: 4px;
+    }
+    .app-icon {
+    color: var(--sidebar-main-color);
+    display: flex;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 25px; /* Adjust the size of the text */
+    }
+    .app-icon svg {
+    width: 24px;
+    height: 24px;
+    }
+.app-container{
+  max-width: 100%;
+}
+    .app-content {
+    padding: 16px;
+    background-color: var(--app-bg);
+    height: 100%;
+    flex: 1;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    .app-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+    }
+    .app-content-headerText {
+    color: var(--app-content-main-color);
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    }
+    .app-content-headerButton {
+    background-color: var(--action-color);
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    }
+    .app-content-headerButton:hover {
+    background-color: var(--action-color-hover);
+    }
+    .app-content-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 4px;
+    }
+    .app-content-actions-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    }
+    .account-info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-top: auto;
+    }
+    .account-info-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    }
+    .account-info-picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .account-info-name {
+    font-size: 16px;    
+    color: var(--sidebar-main-color);
+    margin: 0 8px;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+    .account-info-more {
+    color: var(--sidebar-main-color);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: au to;
+    }
+    *{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('');
+    /* background: ; */
+    }
+    header{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    padding: 20px 50px; /* Adjusted padding values */
+    background: grey;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    z-index: 99;
+
+    }
+    .logo{ 
+    font-size: 2em;
+    color:  azure;
+    }
+    .navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: azure;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    }
+    .navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    }
+    .navigation a:hover::after{
+    transform: scaleX(1);
+    }
+    .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid green;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin: 0 auto; 
+    display: block;
+    transition: .5s;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .btnLogin-popup:hover {
+    background: white;
+    color: black;
+    }
+
+    .wrapper{
+    position: relative;
+    width: 420px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(19, 1, 1, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+    top: 40px;
+    /* overflow: hidden; */
+    }
+    .wrappers{
+    position: relative;
+    width: 420px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(19, 1, 1, 0.5);
+    /* border-radius: 20px; */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    top: 40px;
+    /* overflow: hidden; */
+    }
+    .img1{
+    background: url('/images/des.PNG');
+    }
+    .wrapper .form-box{
+    width: 100%;
+    padding: 20px;
+    }
+    .page-content {
+    min-height: 100vh; 
+    }
+    .page-content {
+    padding: 40px; 
+    margin: 20px; 
+    }
+    .page-content {
+    font-size: 16px; 
+    line-height: 1.5; 
+    }
+    .noteit h1 {
+    color: rgb(245, 181, 181); /* Note text color */
+    margin: 5px 0;
+    text-align: center;
+    font-size: 2em;
+    }
+
+    .noteit h2 {
+    color: rgb(0, 0, 0);
+    margin: 5px 0;
+    text-align: center;
+    font-size: 2em;
+    }
+    .noteit .green {
+    color: rgb(65, 233, 65); /* Set text color */
+    }
+    .noteit .white {
+    color: rgb(247, 214, 214); /* Set text color */
+    }
+    .input-box{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-bottom: 2px solid gray;
+    margin: 30px 0;
+    }
+    .input-box label {
+    position: absolute;
+    top: -50px; /* Adjust this value as needed to position the label */
+    left: 5px;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    /* transition: .5s; */
+    }
+
+    .input-box input:focus + label,
+    .input-box input:focus + label {
+    top: -20px;
+    }
+
+    .input-box input{
+    width: 100%;
+    /* height: 100%; */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    }
+    .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+    }
+    .remember-forgot{
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    }
+    .remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+    }
+    .remember-forgot a{
+    color: blue;
+    text-decoration: none;
+    }
+    .remember-forgot a:hover{
+    text-decoration: underline;
+    }
+    .btn {
+    width: 20%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: azure;
+    margin: 0 auto; /* Center horizontally */
+    display: block;
+    text-align: center;
+    justify-content: center;
+    }
+
+    .btn:hover {
+    background-color: #0056b3;
+    }
+    .container{
+        /* margin-right: 90px;  */
+        /* margin-left: 120px; */
+        max-width: 100%;
+        
+        min-height: 100vh;
+        /* background: linear-gradient(135deg, #cf9aff, #95c0ff); */
+        /* color: green; */
+        /* padding-top: 2.5%; */
+        padding-left: 200%;
+        padding: 30px 30px 30px 270px;
+        overflow-y: auto;
+    }
+    .notes-container {
+    max-height: 400px; 
+    overflow-y: auto; 
+    display: flex;
+    }
+    .input-box1{
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        min-height: 150px;
+        background: #fff;
+        color: #333;
+        padding: 20px 20px; /* Adjust padding to give space for the title to move up */
+        margin: 20px 0;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .input-box1 h1 {
+        position: absolute;
+        top: -20px; /* Adjust this value to move the title up or down */
+        left: 20px; /* Adjust this value to align the title horizontally */
+        font-size: 1.5em; /* Adjust font size as needed */
+        color: #000; /* Adjust color as needed */
+    }
+    .notes-column {
+    flex: 1;
+    padding: 0 10px; /* Add padding to create space between columns */
+    }
+    .sidebar{
+    position: fixed; /* Fixed positioning to keep it visible */
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #6b6b6b;
+      color: white;
+      flex-basis: 200px;
+    max-width: 250px;
+    flex-shrink: 0;
+  
+    display: flex;
+    flex-direction: column;
+    }
+    .sidebar header{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    line-height: 20px;
+    background:gray;
+    user-select: none;
+    padding: 20px 20px;
+    }
+    .sidebar ul a{
+    /* display: block; */
+    /* height: 100px; */
+    width: 100%;
+    /* line-height: 55px; */
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    
+    /* border-top: 1px solid white; */
+    /* border-bottom: 1px solid black; */
+    }
+    ul li:hover a{
+    padding-left: 50px;
+    }
+    .sidebar ul a i{
+    margin-right: 16px;
+    }
+    #check{
+    display: none;
+    }
+    label #btn1, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    border-radius: 3px;
+    }
+    label #btn1{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    }
+    label #cancel{
+    z-index: 1111;
+    left: 195px;
+    top: 17px;
+    font-size: 30px;
+    color: #063146;
+    padding: 4px 9px;
+    }
+    .green {
+    color: rgb(0, 0, 0); /* Set text color */
+    }
+    .white {
+    color: rgb(247, 247, 247); /* Set text color */
+    }
+    #check:checked ~ .sidebar {
+    left: 0;
+    }
+    .add-note-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .add-note-image {
+      margin-right: 1px;
+    }
+    .favorite { 
+      color: gold; /* Change the color to your desired color */
+    }
+    .allnote {
+        text-align: right;
+        color:white;
+        justify-content: space-between;
+        font: 25px bold;
+    }.search {
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+}
+
+.search-input label {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+.view{
+    /* margin-left: auto; */
+    margin-top: 10px;
+    flex-direction: row-reverse;
+}
+.note-title {
+    margin-top: -40px; /* Adjust this value to move the title up */
+}
+.favorited {
+    color: red; /* Change the color to red */
+}
+      .note-container {
+        width:1000px;
+        justify-content: flex-start; 
+        /* padding:50px; */
+    }
+    .list-group-item1 > div {
+    margin-bottom: 10px; 
+    display: flex;
+    margin-top: 10px;
+    height:60px;
+}
+
+
+.list-group-item1 .action {
+    /* margin-left:150px; */
+    margin-left: auto; 
+    gap: 8px;
+    display: flex;
+    /* margin-top: 10px; */
+    flex-direction: row-reverse;
+}
+.list-group-item1 .action button {
+    /* margin-left: 5px;  */
+    font-size: 10px; /* Adjust button font size */
+    background: none;
+    border: none;
+}
+/* If you prefer padding, you can use padding instead of margin */
+.list-group-item1 .action {
+    margin-right: 5px;
+    gap: 10px;
+    display: flex;
+    /* margin-top: 50px; */
+    /* flex-direction: row-reverse; */
+    margin-top: 45px
+
+}
+.list-group-item1 .action a,
+.list-group-item1 .action button {
+    /* /margin-left: 5px; */    
+    font-size: 15px;
+    /* padding: 3px 30px; */ 
+}
+.list-group-item1 .note-details {
+    /* margin-top: 100px; Adjust the margin-top as needed */
+    /* margin-top: 90px; */
+    margin-top: auto;
+    margin-top: -71px;
+}
+.list-group-item1 h3 {
+    margin-top: -53px; /* Adjust this value to move the title higher */
+}
+.list-group-item1 > div {
+    margin-bottom: 10px; 
+    display: flex;
+    margin-top: 10px;
+    height:60px;
+}
+
+
+.list-group-item2 .action {
+    /* margin-left:150px; */
+    margin-left: auto; 
+    gap: 8px;
+    display: flex;
+    margin-top: -17px;
+    flex-direction: row-reverse;
+}
+.list-group-item2 .action button {
+    /* margin-left: 5px;  */
+    font-size: 10px; /* Adjust button font size */
+    background: none;
+    border: none;
+}
+/* If you prefer padding, you can use padding instead of margin */
+.list-group-item2 .action {
+    margin-right: 5px;
+    gap: 10px;
+    display: flex;
+    /* margin-top: 50px; */
+    /* flex-direction: row-reverse; */
+    margin-top: 45px
+
+}
+.list-group-item2 .action a,
+.list-group-item2 .action button {
+    /* /margin-left: 5px; */    
+    font-size: 15px;
+    /* padding: 3px 30px; */ 
+}
+.list-group-item2 .note-details {
+    /* margin-top: 100px; Adjust the margin-top as needed */
+    /* margin-top: 90px; */
+    margin-top: auto;
+    margin-top: -71px;
+}
+.list-group-item2 h3 {
+    /* margin-top: -53px; Adjust this value to move the title higher */
+}
+.action {
+    /* Style for the action div */
+}
+
+.action i {
+    /* Style for all icons inside the action div */
+    margin-right: 5px; /* Adjust spacing between icons */
+}
+
+.action i.fa-heart {
+    /* color: red; Example: Set color for the heart icon */
+}
+
+ .list-group .note-content1 {
+      /* margin: 0; Remove margin to prevent extra spacing */
+          /* width: calc(100% - 40px); Adjust width to account for delete button */
+          resize: none; /* Disable textarea resize */
+          border: none; /* Remove textarea border */
+         word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        max-height: 100px; /* Adjust the maximum height as needed */
+         overflow: hidden;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+        /* margin-top: 50px; */
+        /* height: 100px;  */
+        margin-top: -78px;
+}
