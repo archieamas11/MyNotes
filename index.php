@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: dashboard_page.php");
             exit();
         } else {
-            echo '<script>alert("Invalid Credentials"); window.location.href="login.php";</script>';
+            echo '<script>alert("Invalid Credentials"); window.location.href="index.php";</script>';
             exit();
         }
     } catch (PDOException $e) {
