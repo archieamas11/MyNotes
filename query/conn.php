@@ -23,7 +23,7 @@
 // }
 
 
-$conn = mysql_connect(
+$conn = mysqli_connect(
     getenv("DB_HOST"),
     getenv("DB_USERNAME"),
     getenv("DB_PASSWORD"),
@@ -32,7 +32,7 @@ $conn = mysql_connect(
 );
 
 if(!$conn){
-    die("Connection failed: ", mysql_connect_error());
+    die("Connection failed: ", mysqli_connect_error());
 }
 
 ?>
