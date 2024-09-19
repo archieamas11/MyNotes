@@ -31,8 +31,8 @@ $conn = mysqli_connect(
     getenv("DB_PORT") ? : "3306"
 );
 
-if(!$conn){
-    die("Connection failed: ", mysqli_connect_error());
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 ?>
