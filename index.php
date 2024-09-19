@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $checkUserStmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$user) {
-            echo '<script>alert("Invalid Credentials"); window.location.href="login.php";</script>';
+            echo '<script>alert("Invalid Credentials"); window.location.href="dashboardNotes.php";</script>';
             exit();
         }
 
