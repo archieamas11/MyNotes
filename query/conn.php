@@ -1,16 +1,25 @@
 <?php
 
-$servername = "207.148.118.163";
-$username = "root";
-$password = "ux1kK0iycXOFsGSJLs0ckfWqkHTwpphMPJ5G6NJyFLe54koneYsXPzZQm6A7nTyr";
-$db = "crud";
+// Database configuration using environment variables
+$servername = getenv('DB_HOST') 
+$username = getenv('DB_USERNAME')
+$password = getenv('DB_PASSWORD')
+$dbname = getenv('DB_DATABASE')
+$port = getenv('DB_PORT') ?: "3306";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
+    // Create a PDO connection with port
+    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
+    
+    // Set the PDO error mode to exception for better error handling
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "";
+    
+    // Connection successful
+    echo "Connected successfully";
 } catch (PDOException $e) {
-    echo "Failed " . $e->getMessage();
+    // Log the actual error message and show a user-friendly message
+    error_log("Database connection failed: " . $e->getMessage(), 0);
+    echo "Connection failed. Please try again later.";
 }
 
 ?>
