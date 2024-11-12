@@ -15,7 +15,11 @@
            <nav class="navigation">
                 <a href="home.php">HOME</a>
                 <a href="register.php">REGISTER</a>
+<<<<<<< HEAD
                 <a href="index.php">SIGNIN</a>
+=======
+                <a href="login.php">SIGNIN</a>
+>>>>>>> upstream/main
                 <!-- <a href="dashBoard.php">Services</a> -->
                 <!-- <a href="#">Contact</a> --> 
                 <!-- <button class = "btnLogin-popup"> SIGNIN</button> -->

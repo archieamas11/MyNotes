@@ -7,7 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Check if the user exists
+<<<<<<< HEAD
         $checkUserSql = "SELECT * FROM table_user WHERE name = :email";
+=======
+        $checkUserSql = "SELECT * FROM table_user WHERE name = :email"; 
+>>>>>>> upstream/main
         $checkUserStmt = $conn->prepare($checkUserSql);
         $checkUserStmt->bindParam(':email', $email);
 
@@ -45,7 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,16 +60,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Website</title>
     <link rel="stylesheet" href="mes1.css">
 </head>
+<<<<<<< HEAD
 
 <body>
     <header>
         <div class="noteit">
             <h1 class="white">Note<span class="green">IT</span></h1>
+=======
+<body>
+    <header>
+        <div class="noteit">
+        <h1  class="white">Note<span class="green">IT</span></h1>
+>>>>>>> upstream/main
         </div>
         <nav class="navigation">
             <a href="home.php">HOME</a>
             <a href="register.php">REGISTER</a>
+<<<<<<< HEAD
             <a href="index.php">SIGNIN</a>
+=======
+            <a href="login.php">SIGNIN</a>
+>>>>>>> upstream/main
             <!-- <a href="dashBoard.php">Services</a> -->
         </nav>
     </header>
@@ -71,13 +89,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="noteit">
                 <h1 class="white">Note<span class="green">IT</span></h1>
             </div>
+<<<<<<< HEAD
             <form action="index.php" method="POST">
+=======
+            <form action="login.php" method="POST">
+>>>>>>> upstream/main
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" name="email" required>
                     <!-- <div> -->
                     <label>Email</label>
+<<<<<<< HEAD
                     <!-- </div> -->
+=======
+<!-- </div> -->
+>>>>>>> upstream/main
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
@@ -90,7 +116,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
+<<<<<<< HEAD
                     <p>Don't Have an Account? <a href="register.php" class="register-link">Register</a></p>
+=======
+                    <p>Don't Have an Account? <a href="#" class="register-link">Register</a></p>
+>>>>>>> upstream/main
                 </div>
             </form>
         </div>
@@ -100,5 +130,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> upstream/main
